@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Showcase - Tailwind CSS</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-100 via-cyan-100 to-indigo-200 min-h-screen text-slate-800">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="bg-gradient-to-r from-blue-700 via-cyan-600 to-indigo-700
+                text-white p-4 shadow-lg border-b-4 border-cyan-300">
+
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+
+            <h1 class="text-2xl font-extrabold tracking-wide">
+                SB Jain
+            </h1>
+
+            <div class="flex gap-5 text-sm md:text-base font-semibold">
+                <a href="#" class="hover:text-yellow-300 transition">Home</a>
+                <a href="#" class="hover:text-yellow-300 transition">Products</a>
+                <a href="#" class="hover:text-yellow-300 transition">Gallery</a>
+                <a href="#" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+
+        <!-- Heading -->
+        <div class="text-center mb-10">
+
+            <h1 class="text-4xl md:text-5xl font-extrabold
+                       bg-gradient-to-r from-blue-700 via-cyan-600 to-indigo-700
+                       bg-clip-text text-transparent">
+                Product Showcase
+            </h1>
+
+            <div class="w-32 h-1 bg-cyan-500 mx-auto mt-4 rounded-full"></div>
+
+            <p class="text-gray-600 mt-4 text-lg">
+                Explore our latest collection of modern products
+            </p>
+
+        </div>
+
+
+        <!-- ================= PRODUCT CARDS ================= -->
+        <!-- Responsive Breakpoints:
+             Mobile  : 1 column
+             Tablet  : 2 columns
+             Desktop : 3 columns
+        -->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+            <!-- ================= CARD 1 ================= -->
+            <div class="bg-white rounded-2xl overflow-hidden
+                        border-2 border-blue-200 shadow-lg
+                        hover:shadow-2xl hover:-translate-y-2
+                        hover:border-blue-500
+                        transition-all duration-500">
+
+                <div class="overflow-hidden border-b-2 border-blue-200">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                        alt="Premium Headphones"
+                        class="w-full h-56 object-cover
+                               hover:scale-110
+                               transition-all duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <h2 class="text-2xl font-extrabold text-blue-700 mb-3">
+                        Premium Headphones
+                    </h2>
+
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Enjoy high-quality sound with comfortable design
+                        and modern features for an amazing listening experience.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-xl font-bold text-blue-700">
+                            ₹2,999
+                        </span>
+
+                        <button
+                            class="bg-gradient-to-r from-blue-500 to-cyan-500
+                                   text-white px-5 py-2 rounded-lg
+                                   font-semibold
+                                   hover:scale-105 hover:shadow-lg
+                                   transition-all duration-300">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ================= CARD 2 ================= -->
+            <div class="bg-white rounded-2xl overflow-hidden
+                        border-2 border-green-200 shadow-lg
+                        hover:shadow-2xl hover:-translate-y-2
+                        hover:border-green-500
+                        transition-all duration-500">
+
+                <div class="overflow-hidden border-b-2 border-green-200">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                        alt="Smart Watch"
+                        class="w-full h-56 object-cover
+                               hover:scale-110
+                               transition-all duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <h2 class="text-2xl font-extrabold text-green-700 mb-3">
+                        Smart Watch
+                    </h2>
+
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Stay connected with a stylish smart watch
+                        featuring useful fitness and smart technology features.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-xl font-bold text-green-700">
+                            ₹3,499
+                        </span>
+
+                        <button
+                            class="bg-gradient-to-r from-green-500 to-emerald-500
+                                   text-white px-5 py-2 rounded-lg
+                                   font-semibold
+                                   hover:scale-105 hover:shadow-lg
+                                   transition-all duration-300">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- ================= CARD 3 ================= -->
+            <div class="bg-white rounded-2xl overflow-hidden
+                        border-2 border-purple-200 shadow-lg
+                        hover:shadow-2xl hover:-translate-y-2
+                        hover:border-purple-500
+                        transition-all duration-500">
+
+                <div class="overflow-hidden border-b-2 border-purple-200">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80"
+                        alt="Smartphone"
+                        class="w-full h-56 object-cover
+                               hover:scale-110
+                               transition-all duration-500">
+
+                </div>
+
+                <div class="p-6">
+
+                    <h2 class="text-2xl font-extrabold text-purple-700 mb-3">
+                        Smartphone
+                    </h2>
+
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Experience a powerful smartphone with a modern
+                        design, high-quality display and smooth performance.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-xl font-bold text-purple-700">
+                            ₹24,999
+                        </span>
+
+                        <button
+                            class="bg-gradient-to-r from-purple-500 to-pink-500
+                                   text-white px-5 py-2 rounded-lg
+                                   font-semibold
+                                   hover:scale-105 hover:shadow-lg
+                                   transition-all duration-300">
+                            Buy Now
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gradient-to-r from-slate-800 to-indigo-900
+                   text-white text-center py-8 mt-8
+                   border-t-4 border-cyan-400">
+
+        <h2 class="text-xl font-bold">
+            SB Jain Institute of Technology
+        </h2>
+
+        <p class="mt-2 text-gray-300">
+            Responsive Product Showcase using Tailwind CSS
+        </p>
+
+        <p class="mt-3 text-sm text-gray-400">
+            © 2026 All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <!-- ================= TAILWIND CLASS TABLE ================= -->
+    <section class="max-w-6xl mx-auto px-4 py-10">
+
+        <h2 class="text-3xl font-bold text-center text-indigo-700 mb-6">
+            Tailwind CSS Classes Used
+        </h2>
+
+        <div class="overflow-x-auto bg-white rounded-xl shadow-lg border-2 border-indigo-200">
+
+            <table class="w-full text-left border-collapse">
+
+                <thead>
+                    <tr class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                        <th class="p-4 border">Class</th>
+                        <th class="p-4 border">Purpose</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">bg-gradient-to-br</td>
+                        <td class="p-3 border">Creates a diagonal background gradient.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">from-blue-100</td>
+                        <td class="p-3 border">Sets the starting gradient color.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">via-cyan-100</td>
+                        <td class="p-3 border">Adds a middle cyan gradient color.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">to-indigo-200</td>
+                        <td class="p-3 border">Sets the ending gradient color.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">flex</td>
+                        <td class="p-3 border">Creates a flexible layout.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">justify-between</td>
+                        <td class="p-3 border">Places items with space between them.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">items-center</td>
+                        <td class="p-3 border">Aligns items vertically in the center.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">grid</td>
+                        <td class="p-3 border">Creates a CSS grid layout.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">grid-cols-1</td>
+                        <td class="p-3 border">Displays one column on small screens.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">md:grid-cols-2</td>
+                        <td class="p-3 border">Displays two columns on medium screens.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">lg:grid-cols-3</td>
+                        <td class="p-3 border">Displays three columns on large screens.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">gap-8</td>
+                        <td class="p-3 border">Adds space between grid items.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">rounded-2xl</td>
+                        <td class="p-3 border">Creates rounded corners.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">border-2</td>
+                        <td class="p-3 border">Adds a two-pixel border.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">shadow-lg</td>
+                        <td class="p-3 border">Adds a large shadow.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">hover:shadow-2xl</td>
+                        <td class="p-3 border">Increases shadow when hovering.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">hover:-translate-y-2</td>
+                        <td class="p-3 border">Moves the card upward on hover.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">hover:scale-110</td>
+                        <td class="p-3 border">Enlarges the image on hover.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">transition-all</td>
+                        <td class="p-3 border">Creates smooth transitions.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">duration-500</td>
+                        <td class="p-3 border">Sets transition duration.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">max-w-6xl</td>
+                        <td class="p-3 border">Limits the maximum content width.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">mx-auto</td>
+                        <td class="p-3 border">Centers the container horizontally.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="p-3 border font-semibold">min-h-screen</td>
+                        <td class="p-3 border">Makes the minimum height equal to the screen height.</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </section>
+
+</body>
+</html>
