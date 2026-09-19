@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Calculator</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .glass-box {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .input-style {
+            transition: all 0.3s ease;
+        }
+
+        .input-style:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 0 18px rgba(34, 211, 238, 0.45);
+        }
+
+        .calculate-btn {
+            transition: all 0.3s ease;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 flex items-center justify-center p-6">
+
+    <!-- Student Details - Top Right Corner -->
+    <div class="fixed top-5 right-5 glass-box px-5 py-3 rounded-2xl shadow-xl text-right text-white">
+        <p class="text-sm font-bold text-cyan-300">S. B. Jain</p>
+        <p class="text-xs font-semibold">Anisha Haldar</p>
+        <p class="text-xs text-purple-200">CS25069</p>
+    </div>
+
+    <!-- Main Box -->
+    <div class="glass-box w-full max-w-md rounded-3xl p-8 shadow-2xl">
+
+        <!-- College Name -->
+        <div class="text-center mb-6">
+            <div class="inline-block bg-cyan-400/20 border border-cyan-300/40 px-4 py-2 rounded-full mb-4">
+                <p class="text-cyan-300 text-sm font-semibold tracking-widest">
+                    S. B. JAIN
+                </p>
+            </div>
+
+            <h1 class="text-3xl font-extrabold text-white leading-tight">
+                Student Grade
+                <span class="text-cyan-300">Calculator</span>
+            </h1>
+
+            <p class="text-indigo-200 text-sm mt-3">
+                Calculate total marks, percentage and grade
+            </p>
+        </div>
+
+        <!-- Marks 1 -->
+        <label class="block text-white font-semibold mb-2">
+            Enter Marks 1
+        </label>
+
+        <input
+            type="number"
+            id="m1"
+            placeholder="Enter first subject marks"
+            class="input-style w-full p-3 mb-5 rounded-xl bg-white/10 border-2 border-cyan-300/50 text-white placeholder-indigo-200 outline-none focus:border-cyan-300"
+        >
+
+        <!-- Marks 2 -->
+        <label class="block text-white font-semibold mb-2">
+            Enter Marks 2
+        </label>
+
+        <input
+            type="number"
+            id="m2"
+            placeholder="Enter second subject marks"
+            class="input-style w-full p-3 mb-5 rounded-xl bg-white/10 border-2 border-purple-300/50 text-white placeholder-indigo-200 outline-none focus:border-purple-300"
+        >
+
+        <!-- Marks 3 -->
+        <label class="block text-white font-semibold mb-2">
+            Enter Marks 3
+        </label>
+
+        <input
+            type="number"
+            id="m3"
+            placeholder="Enter third subject marks"
+            class="input-style w-full p-3 mb-6 rounded-xl bg-white/10 border-2 border-pink-300/50 text-white placeholder-indigo-200 outline-none focus:border-pink-300"
+        >
+
+        <!-- Calculate Button -->
+        <button
+            onclick="calculate()"
+            class="calculate-btn w-full py-3 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-white font-bold text-lg"
+        >
+            Calculate Result
+        </button>
+
+        <!-- Result Box -->
+        <div
+            id="result"
+            class="mt-6 p-5 rounded-2xl bg-slate-950/60 border border-cyan-300/30 text-center text-cyan-100"
+        >
+            Result will appear here
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center text-indigo-200 text-xs mt-6">
+            Designed for practical session
+        </p>
+
+    </div>
+
+
+    <script>
+
+        function calculate() {
+
+            let m1 = Number(document.getElementById("m1").value);
+            let m2 = Number(document.getElementById("m2").value);
+            let m3 = Number(document.getElementById("m3").value);
+
+            let total = m1 + m2 + m3;
+
+            let percentage = total / 3;
+
+            let grade;
+
+            if (percentage >= 90) {
+                grade = "A+";
+            }
+            else if (percentage >= 80) {
+                grade = "A";
+            }
+            else if (percentage >= 70) {
+                grade = "B";
+            }
+            else if (percentage >= 60) {
+                grade = "C";
+            }
+            else if (percentage >= 40) {
+                grade = "D";
+            }
+            else {
+                grade = "F";
+            }
+
+            document.getElementById("result").innerHTML =
+                "<p class='text-lg font-semibold text-cyan-300'>Total Marks: " + total + "</p>" +
+                "<p class='text-lg font-semibold text-purple-300'>Percentage: " + percentage.toFixed(2) + "%</p>" +
+                "<p class='text-2xl font-extrabold text-pink-300 mt-2'>Grade: " + grade + "</p>";
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
